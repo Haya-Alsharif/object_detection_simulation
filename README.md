@@ -20,3 +20,13 @@ rostopic echo /down_camera/rgb/camera_info -n1 | grep K:
 <node pkg="tf" type="static_transform_publisher"    name="zed_to_simulation_frame"    args="0 0 0 0 0 0 $(arg down_frame_id) zed_left_camera_optical_frame 40"/>
 ```
 
+
+## Build and launch
+```
+cd catkin_ws/src/
+git clone https://github.com/Haya-Alsharif/object_detection_simulation
+cd ..
+catkin build object_detection_simulation
+source devel/setup.bash
+roslaunch object_detection_simulation object_detection_simulation.launch 
+```
