@@ -9,7 +9,7 @@ To use it make sure you have the following pakages:
 3) **darknet_ros:** to run yolo NN for object detection
 4) **Tarek's object localization**.
 
-## Required modifications:
+### Required modifications:
 1) update camera intrensic paramters in Tarek's package to the values you obtain by: 
 ```
 rostopic echo /down_camera/rgb/camera_info -n1 | grep K:
@@ -21,7 +21,7 @@ rostopic echo /down_camera/rgb/camera_info -n1 | grep K:
 ```
 
 
-## Build and launch
+### Build and launch:
 ```
 cd catkin_ws/src/
 git clone https://github.com/Haya-Alsharif/object_detection_simulation
