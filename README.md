@@ -23,7 +23,7 @@ rostopic echo /down_camera/rgb/camera_info -n1 | grep K:
 ## Build and launch:
 ```
 cd catkin_ws/src/
-git clone https://github.com/Haya-Alsharif/object_detection_simulation
+git clone https://github.com/Haya-Alsharif/object_detection_simulation.git
 cd ..
 catkin build object_detection_simulation
 source devel/setup.bash
