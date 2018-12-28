@@ -15,8 +15,8 @@ To use it make sure you have the following pakages:
 rostopic echo /down_camera/rgb/camera_info -n1 | grep K:
 ```
 
-2) Instead of going into Tarek's package and changing the camera frame_id to the one used in the simulator, I added the following transformation in `object_detection_simulation.launch`: 
+2) Instead of going into Tarek's package and changing the camera frame_id to the one used in the simulator, I added the following transformation in `object_detection_simulation.launch`. Make sure that the topic frame_id used in Tarek's package is `zed_left_camera_optical_frame`.
 ```
 <node pkg="tf" type="static_transform_publisher"    name="zed_to_simulation_frame"    args="0 0 0 0 0 0 $(arg down_frame_id) zed_left_camera_optical_frame 40"/>
 ```
-Make sure that the topic frame_id used in Tarek's package is `zed_left_camera_optical_frame`.
+
