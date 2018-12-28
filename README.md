@@ -1,5 +1,4 @@
 # object_detection_simulation
-
 A simple simulation enviroment of one person and iris drone with downward looking camera. 
 
 ## Required packages:
@@ -9,7 +8,8 @@ To use it make sure you have the following pakages:
 3) **darknet_ros:** to run yolo NN for object detection
 4) **Tarek's object localization**.
 
-### Required modifications:
+
+## Required modifications:
 1) update camera intrensic paramters in Tarek's package to the values you obtain by: 
 ```
 rostopic echo /down_camera/rgb/camera_info -n1 | grep K:
@@ -20,8 +20,7 @@ rostopic echo /down_camera/rgb/camera_info -n1 | grep K:
 <node pkg="tf" type="static_transform_publisher"    name="zed_to_simulation_frame"    args="0 0 0 0 0 0 $(arg down_frame_id) zed_left_camera_optical_frame 40"/>
 ```
 
-
-### Build and launch:
+## Build and launch:
 ```
 cd catkin_ws/src/
 git clone https://github.com/Haya-Alsharif/object_detection_simulation
